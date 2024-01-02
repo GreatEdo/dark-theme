@@ -1,0 +1,48 @@
+:root{
+    --primarycolor: #232323;
+    --body: white;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--body);
+}
+body.dark{
+    --body: #232323;
+    --primarycolor:white;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dark-light i{
+    position: absolute;
+    font-size: 50px;
+    text-align: center;
+    cursor: pointer;
+    color: var(--primarycolor);
+}
+
+.dark-light i.sun{
+    opacity: 0;
+    pointer-events: none;
+}
+.dark-light.active i.sun{
+    opacity: 1;
+    pointer-events: auto;
+}
+.dark-light.active i.moon{
+    opacity: 0;
+    pointer-events: auto;
+}
